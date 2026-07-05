@@ -1,0 +1,264 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "policyId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "customerName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "customerAddress",
+						"type": "address"
+					}
+				],
+				"name": "PolicyCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "policyId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum InsurancePolicy.PolicyStatus",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"name": "StatusUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_policyId",
+						"type": "uint256"
+					}
+				],
+				"name": "checkPolicyStatus",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_policyId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_customerName",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_customerAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_premium",
+						"type": "uint256"
+					}
+				],
+				"name": "createPolicy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_policyId",
+						"type": "uint256"
+					}
+				],
+				"name": "getPolicy",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "policies",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "policyId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "customerName",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "customerAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "premium",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum InsurancePolicy.PolicyStatus",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "exists",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_policyId",
+						"type": "uint256"
+					}
+				],
+				"name": "setPolicyActive",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_policyId",
+						"type": "uint256"
+					}
+				],
+				"name": "setPolicyClaimed",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/StatusPolisAsuransi.sol": "InsurancePolicy"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/StatusPolisAsuransi.sol": {
+			"keccak256": "0x14067e02bec20c6b8d1d1943a16194b678b9b90631c20c7b83e57b29c5007aae",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://125090a196cbdb5ea73bf67b9800171e8e231569fc8ef49f06e9fcf01131a018",
+				"dweb:/ipfs/Qmbsp5Dhob7PZDkPhVbQY6Ku6dJ6PX3jrdFr1kscwx4sgo"
+			]
+		}
+	},
+	"version": 1
+}
